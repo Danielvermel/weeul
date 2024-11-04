@@ -12,7 +12,7 @@ const WhyUs = () => {
                         Why Healix?
                     </h2>
 
-                    <div className="relative flex md:flex-wrap flex-nowrap  rounded-7xl md:overflow-hidden max-md:flex-col feature-after max-md:border-none max-md:rounded-none max-md:gap-3">
+                    <div className="relative flex md:flex-wrap flex-nowrap  rounded-7xl md:overflow-hidden max-md:flex-col feature-after max-md:border-none max-md:rounded-none max-md:gap-5">
                         <div className="max-w-4xl mx-auto p-4 basis-1/2">
                             <div className="grid grid-cols-11 gap-3 mb-3 text-center text-white">
                                 <div className="bg-p4 rounded-lg p-4 font-bold col-span-3 opacity-0"></div>
