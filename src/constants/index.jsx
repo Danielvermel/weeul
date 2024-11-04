@@ -26,6 +26,25 @@ export const reasons = [
     },
 ];
 
+export const menus = [
+    {
+        id: "0",
+        title: "Why Healix",
+    },
+    {
+        id: "1",
+        title: "How It Works",
+    },
+    {
+        id: "2",
+        title: "What We Offer",
+    },
+    {
+        id: "3",
+        title: "About Us",
+    },
+];
+
 export const comparisonTable = [
     {
         id: "0",

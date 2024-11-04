@@ -1,5 +1,7 @@
 import { Link as LinkScroll } from "react-scroll";
+import { menus } from "../constants/index.jsx";
 import { useEffect, useState } from "react";
+import Button from "../components/Button.jsx";
 import clsx from "clsx";
 
 const Header = () => {
@@ -66,16 +68,26 @@ const Header = () => {
                                         <img src="/images/healix.svg" width={160} height={55} alt="logo" />
                                     </LinkScroll>
                                 </li>
-                                <li className="nav-li">
-                                    <NavLink title="Why Healix" />
-                                    {/* <div className="dot" /> */}
-                                    <NavLink title="How It Works" />
-                                </li>
+                                {menus.map(({ id, title }) => (
+                                    <>
+                                        <li className="nav-li" key={id}>
+                                            <NavLink title={title} />
+                                        </li>
+                                    </>
+                                ))}
 
                                 <li className="nav-li">
-                                    <NavLink title="What We Offer" />
-                                    {/* <div className="dot" /> */}
-                                    <NavLink title="About Us" />
+                                    <Button
+                                        icon=""
+                                        containerClassName="bg-s6  m-6 mx-0"
+                                        textClassName="tracking-wide"
+                                        onClick={() => {
+                                            setType("client");
+                                            handleOpenModal();
+                                        }}
+                                    >
+                                        Join Us
+                                    </Button>
                                 </li>
                             </ul>
                         </nav>

@@ -14,7 +14,7 @@ const Hero = () => {
     const handleCloseModal = () => setIsModalOpen(false);
 
     return (
-        <section className="relative pt-48 pb-40 mb-16 max-lg:pt-52 max-lg:pb-36 max-md:pt-36 max-md:pb-32">
+        <section className="relative h-lvh pt-48 pb-40 mb-16 max-lg:pt-52 max-lg:pb-36 max-md:pt-36 max-md:pb-32">
             <Modal isOpen={isModalOpen} onClose={handleCloseModal}>
                 <Newsletter type={type} />
             </Modal>
@@ -22,7 +22,7 @@ const Hero = () => {
                 <div className="container">
                     <div className="relative z-2 max-w-440 mr-12 max-lg:max-w-388">
                         {/* <div className="caption small-2 uppercase text-p3">Video Editing</div> */}
-                        <h2 className="mb-6 font-semibold text-7xl text-p4 max-lg:mb-7 max-lg:h2 max-md:mb-4 max-md:text-5xl max-md:leading-12">
+                        <h2 className="mb-6 font-semibold text-6xl text-p4 max-lg:mb-7 max-lg:h2 max-md:mb-4 max-md:text-5xl max-md:leading-12">
                             Your health is in your hands
                         </h2>
                         <p className="max-w-440 mb-14 body-1 max-md:mb-10">
@@ -57,14 +57,14 @@ const Hero = () => {
                         </LinkScroll>
                     </div>
 
-                    <div className="absolute top-48 pt-2 left-[calc(50%-40px)] pointer-events-none hero-img_res max-w-550">
+                    <div className="absolute top-48 pt-2 left-[calc(50%-0px)] pointer-events-none hero-img_res max-w-550">
                         <img src="/images/hero.png" className="size-max max-lg:h-auto rounded-2xl" alt="hero" />
                         <div className="flex flex-row">
                             {reviews.map((review) => (
                                 <div className="basis-1/2 mx-2" key={review.id}>
                                     <Review
                                         item={review}
-                                        containerClassName="last:after:hidden last:after:max-md:block"
+                                        containerClassName="last:after:hidden last:after:max-md:block italic"
                                     />
                                 </div>
                             ))}

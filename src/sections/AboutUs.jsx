@@ -2,7 +2,7 @@ import { Element } from "react-scroll";
 
 const AboutUs = () => {
     return (
-        <section>
+        <section className="bg-white">
             <Element name="About Us" className="pb-32 pt-24 max-lg:pb-24 max-md:py-16">
                 <div className="container ">
                     {/* Yellow-bordered image as the containing element */}

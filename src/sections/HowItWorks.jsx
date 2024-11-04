@@ -14,7 +14,7 @@ const HowItWorks = () => {
     const handleCloseModal = () => setIsModalOpen(false);
 
     return (
-        <section>
+        <section className="bg-white pt-12">
             <Modal isOpen={isModalOpen} onClose={handleCloseModal}>
                 <Newsletter type={type} />
             </Modal>
@@ -58,7 +58,7 @@ const HowItWorks = () => {
                                 <p className="text-sm text-gray-700 mt-1">{caption}</p>
                                 <ul
                                     className={clsx(
-                                        "text-gray-600 mt-2 text-left rounded-2xl p-5 h-64  opacity-95",
+                                        "text-gray-600 mt-2 text-left rounded-2xl p-5 h-64 list-disc pl-5 opacity-95",
                                         bgColor
                                     )}
                                 >
@@ -75,7 +75,7 @@ const HowItWorks = () => {
                 </div>
 
                 {/* Partners */}
-                <div className="container mb-24">
+                <div className="container pb-24">
                     <h2 className="font-semibold text-6xl text-s6 max-lg:mb-7 max-lg:h2 max-md:mb-4 max-md:text-5xl max-md:leading-12">
                         How it Works
                     </h2>

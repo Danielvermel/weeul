@@ -5,7 +5,7 @@ import { CheckIcon } from "@heroicons/react/24/solid";
 
 const WhyUs = () => {
     return (
-        <section className="mb-24">
+        <section className="pt-12 bg-white">
             <Element name="Why Healix">
                 <div className="container">
                     <h2 className="mb-6 font-semibold text-6xl text-p4 max-lg:mb-7 max-lg:h2 max-md:mb-4 max-md:text-5xl max-md:leading-12">
