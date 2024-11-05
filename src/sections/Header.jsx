@@ -80,7 +80,7 @@ const Header = () => {
                                     <Button
                                         icon=""
                                         containerClassName="bg-s6  m-6 mx-0"
-                                        textClassName="tracking-wide"
+                                        textClassName="tracking-wide font-semibold"
                                         onClick={() => {
                                             setType("client");
                                             handleOpenModal();

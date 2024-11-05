@@ -10,7 +10,7 @@ const Button = ({ icon, children, href, containerClassName, textClassName, onCli
                     textClassName
                 )}
             >
-                <span className={clsx("relative z-2 base-bold", textClassName)}>{children}</span>
+                <span className={clsx("relative z-2", textClassName)}>{children}</span>
             </span>
         </>
     );

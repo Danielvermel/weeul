@@ -395,7 +395,8 @@ export const offers = [
     {
         id: "0",
         image: "/images/offers/holistic",
-        bgColor: "bg-green-100",
+        bgColor: "bg-emerald-100",
+        bgTitleColor: "bg-emerald-200",
         title: "Holistic & Integrative Medicine",
         description: "Treats the whole person, combining conventional medicine with alternative therapies.",
         benefits: [
@@ -417,7 +418,8 @@ export const offers = [
     {
         id: "1",
         image: "/images/offers/naturopathy",
-        bgColor: "bg-red-100",
+        bgColor: "bg-amber-100",
+        bgTitleColor: "bg-amber-200",
         title: "Naturopathy",
         description: "Enhances the body’s natural healing abilities with diet, herbs, and natural therapies.",
         benefits: [
@@ -439,6 +441,7 @@ export const offers = [
         id: "2",
         image: "/images/offers/functional-medicine",
         bgColor: "bg-gray-100",
+        bgTitleColor: "bg-gray-200",
         title: "Functional Medicine",
         description: "This root-cause approach focuses on how genetic, environmental, and lifestyle influence health.",
         benefits: [
@@ -459,7 +462,8 @@ export const offers = [
     {
         id: "3",
         image: "/images/offers/chiropractic",
-        bgColor: "bg-blue-100",
+        bgColor: "bg-sky-100",
+        bgTitleColor: "bg-sky-200",
         title: "Chiropractic & Physical Therapy",
         description: "Focuses on aligning the body and restoring movement for pain relief and recovery.",
         benefits: [
@@ -481,6 +485,7 @@ export const offers = [
         id: "4",
         image: "/images/offers/traditional-medicine",
         bgColor: "bg-purple-100",
+        bgTitleColor: "bg-purple-200",
         title: "Traditional Medicine",
         description: "Ancient holistic systems like Ayurveda and TCM focus on balancing the body’s energies naturally.",
         benefits: [
@@ -501,7 +506,8 @@ export const offers = [
     {
         id: "5",
         image: "/images/offers/diet-nutrition",
-        bgColor: "bg-yellow-100",
+        bgColor: "bg-lime-100",
+        bgTitleColor: "bg-lime-200",
         title: "Diet & Nutrition",
         description: "Uses diet, supplements, and lifestyle changes to support overall health and prevent disease.",
         benefits: [

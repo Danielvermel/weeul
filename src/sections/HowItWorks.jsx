@@ -35,7 +35,7 @@ const HowItWorks = () => {
                         <Button
                             icon="/images/zap.svg"
                             containerClassName="bg-s6 w-72 m-6 mx-0"
-                            textClassName="tracking-wide"
+                            textClassName="tracking-wide font-semibold text-xl"
                             onClick={() => {
                                 setType("client");
                                 handleOpenModal();
@@ -58,7 +58,7 @@ const HowItWorks = () => {
                                 <p className="text-sm text-gray-700 mt-1">{caption}</p>
                                 <ul
                                     className={clsx(
-                                        "text-gray-600 mt-2 text-left rounded-2xl p-5 h-64 list-disc pl-5 opacity-95",
+                                        "text-gray-600 mt-2 text-left rounded-2xl pl-8 pt-5 pb-4 pr-4 h-64 list-disc opacity-95",
                                         bgColor
                                     )}
                                 >
@@ -89,7 +89,7 @@ const HowItWorks = () => {
                         <Button
                             icon="/images/zap.svg"
                             containerClassName="bg-p4 w-72 m-6 mx-0"
-                            textClassName="tracking-wide text-white"
+                            textClassName="tracking-wide text-white font-semibold text-xl"
                             onClick={() => {
                                 setType("partner");
                                 handleOpenModal();
@@ -111,7 +111,12 @@ const HowItWorks = () => {
                                     </div>
                                     <h3 className={clsx("text-lg font-semibold", textColor)}>{title}</h3>
                                     <p className="text-sm text-gray-700 mt-1">{caption}</p>
-                                    <ul className={clsx("text-gray-600 mt-2 text-left rounded-2xl p-5 h-64 ", bgColor)}>
+                                    <ul
+                                        className={clsx(
+                                            "text-gray-600 mt-2 text-left rounded-2xl pl-8 pt-5 pb-4 pr-4 h-64 list-disc",
+                                            bgColor
+                                        )}
+                                    >
                                         {reasons.map(({ point, description }) => (
                                             <li key={point + id} className="text-sm mb-2 tracking-wide">
                                                 <strong className="">{point}: </strong>

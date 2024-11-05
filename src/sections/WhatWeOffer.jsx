@@ -10,19 +10,15 @@ const WhatWeOffer = () => {
                     <h2 className="mb-6 font-semibold text-6xl text-p4 max-lg:mb-7 max-lg:h2 max-md:mb-4 max-md:text-5xl max-md:leading-12">
                         What We Offer
                     </h2>
-                    <div className="grid gap-4 grid-cols-2">
-                        {offers.map(({ id, image, bgColor, title, description, benefits }) => (
-                            <div
-                                className={clsx("grid gap-4 grid-cols-3 mb-1 rounded-xl pt-4 pb-2 px-3", bgColor)}
-                                key={id}
-                            >
-                                <div className="col-span-1 flex">
-                                    <img src={image + ".png"} alt={title} className="w-full my-auto" />
+                    <div className="grid gap-x-16 gap-y-6 grid-cols-2">
+                        {offers.map(({ id, image, bgColor, bgTitleColor, title, description, benefits }) => (
+                            <div className={clsx("grid  grid-cols-3 mb-1 rounded-xl", bgColor)} key={id}>
+                                <div className={clsx("col-span-1 flex rounded-l-xl", bgTitleColor)}>
+                                    <span className="font-bold text-2xl text-center m-auto p-3">{title}</span>
                                 </div>
-                                <div className="col-span-2">
-                                    <span className="text-p4 text-lg">{title}</span>
-                                    <p>{description}</p>
-                                    <ul className="list-disc pl-5">
+                                <div className="col-span-2 pt-4 pb-4 pl-3 pr-2">
+                                    <p className="text-p4 text-normal">{description}</p>
+                                    <ul className="list-disc pl-8 mt-2">
                                         {benefits.map(({ id: beneId, description }) => (
                                             <li key={beneId}>{description}</li>
                                         ))}
