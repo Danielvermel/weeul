@@ -7,7 +7,7 @@ const WhatWeOffer = () => {
         <section className="bg-white">
             <Element name="What We Offer">
                 <div className="container">
-                    <h2 className="mb-6 font-semibold text-6xl text-p4 max-lg:mb-7 max-lg:h2 max-md:mb-4 max-md:text-5xl max-md:leading-12">
+                    <h2 className="mb-6 font-semibold text-5xl text-p4 max-lg:mb-7 max-lg:h2 max-md:mb-4 max-md:text-5xl max-md:leading-12">
                         What We Offer
                     </h2>
                     <div className="grid gap-x-16 gap-y-6 grid-cols-2">

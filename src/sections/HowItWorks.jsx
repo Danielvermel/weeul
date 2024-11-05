@@ -14,7 +14,7 @@ const HowItWorks = () => {
     const handleCloseModal = () => setIsModalOpen(false);
 
     return (
-        <section className="bg-white pt-12">
+        <section className="bg-white pt-32">
             <Modal isOpen={isModalOpen} onClose={handleCloseModal}>
                 <Newsletter type={type} />
             </Modal>
@@ -22,27 +22,29 @@ const HowItWorks = () => {
             <Element name="How It Works">
                 {/* Clients */}
                 <div className="container mb-24">
-                    <h2 className="font-semibold text-6xl text-p4 max-lg:mb-7 max-lg:h2 max-md:mb-4 max-md:text-5xl max-md:leading-12">
-                        How it Works
+                    <h2 className="font-semibold text-5xl text-p4 max-lg:mb-7 max-lg:h2 max-md:mb-4 max-md:text-5xl max-md:leading-12">
+                        Your Patient Journey
                     </h2>
-                    <div className="mt-6 mb-8 text-2xl">
-                        <strong>Your Health in Your Hands, Our Mission. </strong>
-                        <span className="block">
-                            Healix connects you with trusted holistic experts who focus on treating your whole self,
-                            offering personalized, science- backed care that fits your lifestyle.
-                        </span>
+                    <div className=" mb-8 text-xl flex flex-row justify-end">
+                        <div className="basis-1/2 text-right">
+                            <strong>Your Health in Your Hands, Our Mission. </strong>
+                            <span className="block">
+                                Healix connects you with trusted holistic experts who focus on treating your whole self,
+                                offering personalized, science- backed care that fits your lifestyle.
+                            </span>
 
-                        <Button
-                            icon="/images/zap.svg"
-                            containerClassName="bg-s6 w-72 m-6 mx-0"
-                            textClassName="tracking-wide font-semibold text-xl"
-                            onClick={() => {
-                                setType("client");
-                                handleOpenModal();
-                            }}
-                        >
-                            Find My Health Partner
-                        </Button>
+                            <Button
+                                icon="/images/zap.svg"
+                                containerClassName="bg-s6 w-72 my-6 mx-0 h-12"
+                                textClassName="tracking-wide font-semibold text-xl"
+                                onClick={() => {
+                                    setType("client");
+                                    handleOpenModal();
+                                }}
+                            >
+                                Find My Health Partner
+                            </Button>
+                        </div>
                     </div>
                     <div className="flex flex-row items-start text-center gap-8">
                         {howItWorks.map(({ id, icon, iconColor, textColor, bgColor, title, caption, reasons }) => (
@@ -76,27 +78,30 @@ const HowItWorks = () => {
 
                 {/* Partners */}
                 <div className="container pb-24">
-                    <h2 className="font-semibold text-6xl text-s6 max-lg:mb-7 max-lg:h2 max-md:mb-4 max-md:text-5xl max-md:leading-12">
-                        How it Works
+                    <h2 className="font-semibold text-5xl text-s6 max-lg:mb-7 max-lg:h2 max-md:mb-4 max-md:text-5xl max-md:leading-12">
+                        Your Partner Guide
                     </h2>
                     <div className="mt-6 mb-8 text-2xl">
-                        <strong>Your Practice, Our Platform.</strong>
-                        <span className="block">
-                            Join our mission to bring Holistic Care to everyone. Grow your practice, reach new patients,
-                            and offer your services through a secure, streamlined platform.
-                        </span>
+                        <div className=" mb-8 text-xl flex flex-row justify-end">
+                            <div className="basis-1/2 text-right">
+                                <strong>Your Practice, Our Platform.</strong>
+                                <span className="block">
+                                    Join our mission to bring Holistic Care to everyone. Grow your practice, reach new
+                                    patients, and offer your services through a secure, streamlined platform.
+                                </span>
 
-                        <Button
-                            icon="/images/zap.svg"
-                            containerClassName="bg-p4 w-72 m-6 mx-0"
-                            textClassName="tracking-wide text-white font-semibold text-xl"
-                            onClick={() => {
-                                setType("partner");
-                                handleOpenModal();
-                            }}
-                        >
-                            Become Our Partner
-                        </Button>
+                                <Button
+                                    containerClassName="bg-p4 w-72 my-6 mx-0 h-12"
+                                    textClassName="tracking-wide text-white font-semibold text-xl"
+                                    onClick={() => {
+                                        setType("partner");
+                                        handleOpenModal();
+                                    }}
+                                >
+                                    Find My Health Partner
+                                </Button>
+                            </div>
+                        </div>
                     </div>
                     <div className="flex flex-row items-start text-center gap-8">
                         {howItWorksPartners.map(
