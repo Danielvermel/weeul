@@ -78,6 +78,156 @@ export const comparisonTable = [
     },
 ];
 
+export const howItWorksTest = [
+    // Patient
+    {
+        pageTitle: "Your Patient Journey",
+        pageTitleColor: "text-p4",
+        subTitle: "Your Health in Your Hands, Our Mission.",
+        mainDescription:
+            "Healix connects you with trusted holistic experts who focus on treating your whole self, offering personalized, science- backed care that fits your lifestyle.",
+        buttonAction: "client",
+        buttonTitle: "Find My Health Partner",
+        buttonColor: "bg-s6",
+        sideImage: "images/how-it-works/healthy-heart.png",
+        stepsColor: "bg-orange-100",
+        steps: [
+            {
+                id: "0",
+                icon: "explore",
+                iconColor: "bg-orange-200",
+                textColor: "text-orange-600",
+                bgColor: "bg-orange-100",
+                title: "Take Control",
+                caption: "Step 1",
+                reasons: [
+                    {
+                        point: "Browser Certified Experts",
+                        description: "Explore a network of verified holistic professionals suited to your needs.",
+                    },
+                    {
+                        point: "Book Instantly",
+                        description: "Schedule a consultation at your own terms and convenience",
+                    },
+                ],
+            },
+            {
+                id: "1",
+                icon: "meet",
+                iconColor: "bg-green-200",
+                textColor: "text-green-600",
+                bgColor: "bg-green-100",
+                title: "Receive Support",
+                caption: "Step 2",
+                reasons: [
+                    {
+                        point: "Comprehensive Assessments",
+                        description: "Discuss your health in detail with a practitioner who looks at the full picture.",
+                    },
+                    {
+                        point: "Guided Plans",
+                        description:
+                            "Receive a plan including natural treatments, lifestyle advice, and preventative care.",
+                    },
+                ],
+            },
+            {
+                id: "2",
+                icon: "best-health",
+                iconColor: "bg-blue-200",
+                textColor: "text-blue-600",
+                bgColor: "bg-blue-100",
+                title: "Your Best Health",
+                caption: "Step 3",
+                reasons: [
+                    {
+                        point: "Ongoing Support",
+                        description: "Connect with your practitioner when needed for updates or adjustments.",
+                    },
+                    {
+                        point: "Track Your Progress",
+                        description: "Watch as your health improves with care plan designed around you.",
+                    },
+                ],
+            },
+        ],
+    },
+    // Partner
+    {
+        pageTitle: "Your Partner Guide",
+        pageTitleColor: "text-s6",
+        subTitle: "Your Practice, Our Platform.",
+        mainDescription:
+            " Join our mission to bring Holistic Care to everyone. Grow your practice, reach new patients, and offer your services through a secure, streamlined platform.",
+        buttonAction: "partner",
+        buttonTitle: " Become Our Partner",
+        buttonColor: "bg-p4 text-white",
+        sideImage: "images/how-it-works/people.png",
+        stepsColor: "bg-green-100",
+        steps: [
+            {
+                id: "0",
+                icon: "join",
+                iconColor: "bg-orange-200",
+                textColor: "text-orange-600",
+                bgColor: "bg-orange-100",
+                title: "Join Our Network",
+                caption: "Step 1",
+                reasons: [
+                    {
+                        point: "Create your Profile",
+                        description:
+                            "Highlight your credentials, specialties, and treatment methods to attract patients",
+                    },
+                    {
+                        point: "Get Verified",
+                        description: "Go through our streamlined verification process to gain trust and visibility",
+                    },
+                ],
+            },
+            {
+                id: "1",
+                icon: "connect",
+                iconColor: "bg-yellow-200",
+                textColor: "text-yellow-600",
+                bgColor: "bg-yellow-100",
+                title: "Guide Patients",
+                caption: "Step 2",
+                reasons: [
+                    {
+                        point: "Flexible Consultations",
+                        description: "Offer virtual or in-person sessions tailored to your preferences.",
+                    },
+                    {
+                        point: "Supportive Tools",
+                        description:
+                            "Access resources for patient management, form bookings, wellness plans to secure messaging",
+                    },
+                ],
+            },
+            {
+                id: "2",
+                icon: "community",
+                iconColor: "bg-blue-200",
+                textColor: "text-blue-600",
+                bgColor: "bg-blue-100",
+                title: "Expand Your Impact",
+                caption: "Step 3",
+                reasons: [
+                    {
+                        point: "Reach New Patients",
+                        description: "Connect with a global community eager for holistic solutions.",
+                    },
+                    {
+                        point: "Enjoy Platform Support",
+                        description: "Healix handles the technical side so you can focus on healing.",
+                    },
+                ],
+            },
+        ],
+    },
+];
+
 export const howItWorks = [
     {
         id: "0",
@@ -85,81 +235,54 @@ export const howItWorks = [
         iconColor: "bg-orange-200",
         textColor: "text-orange-600",
         bgColor: "bg-orange-100",
-        title: "Explore",
+        title: "Take Control",
         caption: "Step 1",
         reasons: [
             {
-                point: "Browser Experts",
-                description: "Explore our network of certified holistic practitioners.",
+                point: "Browser Certified Experts",
+                description: "Explore a network of verified holistic professionals suited to your needs.",
             },
             {
-                point: "Find Your Fit",
-                description: "Use filters to match your needs—naturopathy, acupuncture, Ayurveda, and more.",
-            },
-            {
-                point: "Trial Calls",
-                description: "Schedule a free initial consultation to ensure the right match.",
+                point: "Book Instantly",
+                description: "Schedule a consultation at your own terms and convenience",
             },
         ],
     },
     {
         id: "1",
-        icon: "book",
-        iconColor: "bg-yellow-200",
-        textColor: "text-yellow-600",
-        bgColor: "bg-yellow-100",
-        title: "Book",
+        icon: "meet",
+        iconColor: "bg-green-200",
+        textColor: "text-green-600",
+        bgColor: "bg-green-100",
+        title: "Receive Support",
         caption: "Step 2",
         reasons: [
             {
-                point: "Easy Booking",
-                description: "Choose a practitioner, read profiles, and reviews.",
+                point: "Comprehensive Assessments",
+                description: "Discuss your health in detail with a practitioner who looks at the full picture.",
             },
             {
-                point: "Flexible Scheduling",
-                description: "Select a consultation time that suits you.",
-            },
-            {
-                point: "No Wait",
-                description: "Enjoy instant, transparent bookings without the long waits.",
+                point: "Guided Plans",
+                description: "Receive a plan including natural treatments, lifestyle advice, and preventative care.",
             },
         ],
     },
     {
         id: "2",
-        icon: "meet",
-        iconColor: "bg-green-200",
-        textColor: "text-green-600",
-        bgColor: "bg-green-100",
-        title: "Meet",
-        caption: "Step 3",
-        reasons: [
-            {
-                point: "Secure Consultation",
-                description: "Meet via secure video call or in-person with a local expert.",
-            },
-            {
-                point: "Personalized Plan",
-                description: "Discuss your health, and receive a customized treatment plan.",
-            },
-        ],
-    },
-    {
-        id: "3",
-        icon: "heal-it",
+        icon: "best-health",
         iconColor: "bg-blue-200",
         textColor: "text-blue-600",
         bgColor: "bg-blue-100",
-        title: "Heal It",
-        caption: "Step 4",
+        title: "Your Best Health",
+        caption: "Step 3",
         reasons: [
             {
-                point: "Follow Your Plan",
-                description: "Including natural treatments, lifestyle adjustments, and supplement recommendations.",
+                point: "Ongoing Support",
+                description: "Connect with your practitioner when needed for updates or adjustments.",
             },
             {
-                point: "Ongoing Support",
-                description: "Stay in touch with your practitioner, who’ll guide you throughout your healing journey.",
+                point: "Track Your Progress",
+                description: "Watch as your health improves with care plan designed around you.",
             },
         ],
     },
@@ -172,76 +295,55 @@ export const howItWorksPartners = [
         iconColor: "bg-orange-200",
         textColor: "text-orange-600",
         bgColor: "bg-orange-100",
-        title: "Join",
+        title: "Join Our Network",
         caption: "Step 1",
         reasons: [
             {
-                point: "Sign up",
-                description:
-                    "and create a professional profile, highlighting your credentials, specialties, and treatment methods.",
+                point: "Create your Profile",
+                description: "Highlight your credentials, specialties, and treatment methods to attract patients",
             },
             {
-                point: "Verification",
-                description: "Submit credentials for Healix's review, ensuring patients trust your expertise.",
+                point: "Get Verified",
+                description: "Go through our streamlined verification process to gain trust and visibility",
             },
         ],
     },
     {
         id: "1",
-        icon: "get-verified",
-        iconColor: "bg-purple-200",
-        textColor: "text-purple-600",
-        bgColor: "bg-purple-100",
-        title: "Get Verified",
+        icon: "connect",
+        iconColor: "bg-yellow-200",
+        textColor: "text-yellow-600",
+        bgColor: "bg-yellow-100",
+        title: "Guide Patients",
         caption: "Step 2",
         reasons: [
             {
-                point: "Healix Accreditation",
-                description:
-                    "Once verified, receive badges and levels based on experience, qualifications, and peer reviews.",
+                point: "Flexible Consultations",
+                description: "Offer virtual or in-person sessions tailored to your preferences.",
             },
             {
-                point: "Enhance Visibility",
-                description: "Increase your visibility with premium status through patient and peer reviews.",
+                point: "Supportive Tools",
+                description:
+                    "Access resources for patient management, form bookings, wellness plans to secure messaging",
             },
         ],
     },
     {
         id: "2",
-        icon: "connect",
-        iconColor: "bg-yellow-200",
-        textColor: "text-yellow-600",
-        bgColor: "bg-yellow-100",
-        title: "Connect",
-        caption: "Step 3",
-        reasons: [
-            {
-                point: "Set Your Schedule",
-                description: "Manage your availability with an intuitive scheduling tool.",
-            },
-            {
-                point: "Offer Teleconsultations",
-                description:
-                    "Conduct virtual sessions with patients directly through the platform’s secure video system.",
-            },
-        ],
-    },
-    {
-        id: "3",
         icon: "guide",
         iconColor: "bg-blue-200",
         textColor: "text-blue-600",
         bgColor: "bg-blue-100",
-        title: "Guide",
-        caption: "Step 4",
+        title: "Expand Your Impact",
+        caption: "Step 3",
         reasons: [
             {
-                point: "Patient Feedback",
-                description: "Collect reviews to build trust and improve your ranking on the platform.",
+                point: "Reach New Patients",
+                description: "Connect with a global community eager for holistic solutions.",
             },
             {
-                point: "Expand Reach",
-                description: "Use Healix’s marketing and referral tools to reach more patients and grow your practice.",
+                point: "Enjoy Platform Support",
+                description: "Healix handles the technical side so you can focus on healing.",
             },
         ],
     },

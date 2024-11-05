@@ -32,8 +32,8 @@ const Hero = () => {
 
                         <div className="flex items-center justify-center flex-col gap-10">
                             <Button
-                                containerClassName="bg-s6 w-96"
-                                textClassName="tracking-wide  text-2xl font-semibold"
+                                containerClassName="bg-s6 w-96 h-12"
+                                textClassName="tracking-wide text-2xl font-semibold"
                                 onClick={() => {
                                     setType("client");
                                     handleOpenModal();
@@ -43,7 +43,7 @@ const Hero = () => {
                             </Button>
 
                             <Button
-                                containerClassName="bg-p4 w-96"
+                                containerClassName="bg-p4 w-96 h-12"
                                 textClassName="text-white tracking-wide text-2xl font-semibold"
                                 onClick={() => {
                                     setType("partner");

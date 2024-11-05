@@ -1,7 +1,7 @@
 import { Element } from "react-scroll";
 import React, { useState } from "react";
 import clsx from "clsx";
-import { howItWorks, howItWorksPartners } from "../constants/index.jsx";
+import { howItWorks, howItWorksPartners, howItWorksTest } from "../constants/index.jsx";
 import Button from "../components/Button.jsx";
 import Modal from "../components/Modal.jsx";
 import Newsletter from "../components/Newsletter.jsx";
@@ -14,126 +14,93 @@ const HowItWorks = () => {
     const handleCloseModal = () => setIsModalOpen(false);
 
     return (
-        <section className="bg-white pt-32">
+        <section className="bg-white pt-32 pb-12">
             <Modal isOpen={isModalOpen} onClose={handleCloseModal}>
                 <Newsletter type={type} />
             </Modal>
 
             <Element name="How It Works">
-                {/* Clients */}
-                <div className="container mb-24">
-                    <h2 className="font-semibold text-5xl text-p4 max-lg:mb-7 max-lg:h2 max-md:mb-4 max-md:text-5xl max-md:leading-12">
-                        Your Patient Journey
-                    </h2>
-                    <div className=" mb-8 text-xl flex flex-row justify-end">
-                        <div className="basis-1/2 text-right">
-                            <strong>Your Health in Your Hands, Our Mission. </strong>
-                            <span className="block">
-                                Healix connects you with trusted holistic experts who focus on treating your whole self,
-                                offering personalized, science- backed care that fits your lifestyle.
-                            </span>
-
-                            <Button
-                                icon="/images/zap.svg"
-                                containerClassName="bg-s6 w-72 my-6 mx-0 h-12"
-                                textClassName="tracking-wide font-semibold text-xl"
-                                onClick={() => {
-                                    setType("client");
-                                    handleOpenModal();
-                                }}
+                {howItWorksTest.map(
+                    ({
+                        pageTitle,
+                        pageTitleColor,
+                        subTitle,
+                        mainDescription,
+                        buttonAction,
+                        buttonTitle,
+                        buttonColor,
+                        steps,
+                        stepsColor,
+                        sideImage,
+                    }) => (
+                        <div className="container mb-24">
+                            <h2
+                                className={clsx(
+                                    "font-semibold text-5xl text-p4 max-lg:mb-7 max-lg:h2 max-md:mb-4 max-md:text-5xl max-md:leading-12",
+                                    pageTitleColor
+                                )}
                             >
-                                Find My Health Partner
-                            </Button>
-                        </div>
-                    </div>
-                    <div className="flex flex-row items-start text-center gap-8">
-                        {howItWorks.map(({ id, icon, iconColor, textColor, bgColor, title, caption, reasons }) => (
-                            <div className="basis-1/4" key={id}>
-                                <div className={clsx("p-7 rounded-full mb-4 inline-flex", iconColor)}>
-                                    <img
-                                        src={"/images/how-it-works/" + icon + ".svg"}
-                                        alt="Explore Icon"
-                                        className="w-16 h-16 mx-auto"
-                                    />
-                                </div>
-                                <h3 className={clsx("text-lg font-semibold", "text-", textColor)}>{title}</h3>
-                                <p className="text-sm text-gray-700 mt-1">{caption}</p>
-                                <ul
-                                    className={clsx(
-                                        "text-gray-600 mt-2 text-left rounded-2xl pl-8 pt-5 pb-4 pr-4 h-64 list-disc opacity-95",
-                                        bgColor
-                                    )}
-                                >
-                                    {reasons.map(({ point, description }) => (
-                                        <li key={point + id} className="text-sm mb-2 tracking-wide">
-                                            <strong className="">{point}: </strong>
-                                            {description}
-                                        </li>
-                                    ))}
-                                </ul>
-                            </div>
-                        ))}
-                    </div>
-                </div>
+                                {pageTitle}
+                            </h2>
+                            <div className="text-xl flex flex-row justify-end -mt-6">
+                                <div className="basis-1/2 text-right">
+                                    <strong>{subTitle}</strong>
+                                    <span className="block">{mainDescription}</span>
 
-                {/* Partners */}
-                <div className="container pb-24">
-                    <h2 className="font-semibold text-5xl text-s6 max-lg:mb-7 max-lg:h2 max-md:mb-4 max-md:text-5xl max-md:leading-12">
-                        Your Partner Guide
-                    </h2>
-                    <div className="mt-6 mb-8 text-2xl">
-                        <div className=" mb-8 text-xl flex flex-row justify-end">
-                            <div className="basis-1/2 text-right">
-                                <strong>Your Practice, Our Platform.</strong>
-                                <span className="block">
-                                    Join our mission to bring Holistic Care to everyone. Grow your practice, reach new
-                                    patients, and offer your services through a secure, streamlined platform.
-                                </span>
-
-                                <Button
-                                    containerClassName="bg-p4 w-72 my-6 mx-0 h-12"
-                                    textClassName="tracking-wide text-white font-semibold text-xl"
-                                    onClick={() => {
-                                        setType("partner");
-                                        handleOpenModal();
-                                    }}
-                                >
-                                    Find My Health Partner
-                                </Button>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="flex flex-row items-start text-center gap-8">
-                        {howItWorksPartners.map(
-                            ({ id, icon, iconColor, textColor, bgColor, title, caption, reasons }) => (
-                                <div className="basis-1/4" key={id}>
-                                    <div className={clsx("p-7 rounded-full mb-4 inline-flex", iconColor)}>
-                                        <img
-                                            src={"/images/how-it-works/" + icon + ".svg"}
-                                            alt="Explore Icon"
-                                            className="w-16 h-16 mx-auto"
-                                        />
-                                    </div>
-                                    <h3 className={clsx("text-lg font-semibold", textColor)}>{title}</h3>
-                                    <p className="text-sm text-gray-700 mt-1">{caption}</p>
-                                    <ul
-                                        className={clsx(
-                                            "text-gray-600 mt-2 text-left rounded-2xl pl-8 pt-5 pb-4 pr-4 h-64 list-disc",
-                                            bgColor
-                                        )}
+                                    <Button
+                                        containerClassName={clsx(" w-72 mt-6 mx-0 h-12", buttonColor)}
+                                        textClassName="tracking-wide font-semibold text-xl"
+                                        onClick={() => {
+                                            setType(buttonAction);
+                                            handleOpenModal();
+                                        }}
                                     >
-                                        {reasons.map(({ point, description }) => (
-                                            <li key={point + id} className="text-sm mb-2 tracking-wide">
-                                                <strong className="">{point}: </strong>
-                                                {description}
-                                            </li>
-                                        ))}
-                                    </ul>
+                                        {buttonTitle}
+                                    </Button>
                                 </div>
-                            )
-                        )}
-                    </div>
-                </div>
+                            </div>
+                            <div className="flex flex-row items-start text-center gap-8 -mt-12">
+                                {steps.map(({ id, icon, iconColor, textColor, bgColor, title, caption, reasons }) => (
+                                    <div className="basis-1/4" key={id}>
+                                        <div className={clsx("rounded-full  inline-flex")}>
+                                            <img
+                                                src={"/images/how-it-works/" + icon + ".svg"}
+                                                alt="Explore Icon"
+                                                className="w-36 h-36 mx-auto"
+                                            />
+                                        </div>
+                                        <div className="relative">
+                                            <div
+                                                className={clsx(
+                                                    stepsColor,
+                                                    "py-4",
+                                                    id === "0" && "arrow-end",
+                                                    id === "1" && "-mx-8",
+                                                    id === "2" && "arrow-start "
+                                                )}
+                                            >
+                                                <h3 className={clsx("text-xl font-semibold")}>{title}</h3>
+                                                <p className="text-sm text-gray-700 mt-1 italic">{caption}</p>
+                                            </div>
+                                        </div>
+
+                                        <ul className="text-gray-600 mt-4 text-left rounded-2xl pl-8 pt-7 pb-4 pr-4 h-64 list-disc opacity-95 bg-gray-100">
+                                            {reasons.map(({ point, description }) => (
+                                                <li key={point + id} className="text-sm mb-6 tracking-wide">
+                                                    <strong className="tracking-wider">{point}: </strong>
+                                                    {description}
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </div>
+                                ))}
+                                <div className="basis-1/4 mt-auto justify-center flex">
+                                    <img src={sideImage} />
+                                </div>
+                            </div>
+                        </div>
+                    )
+                )}
             </Element>
         </section>
     );

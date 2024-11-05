@@ -212,6 +212,16 @@
         @apply after:g1 after:absolute after:right-0 after:top-0 after:h-full after:w-1/2 after:mix-blend-soft-light after:content-[''] max-md:after:hidden;
     }
 
+    .arrow-end::before {
+        content: " ";
+        clip-path: polygon(30% 50%, 0 0, 0 100%);
+        @apply absolute left-0 top-0 bg-white h-full w-2/5;
+    }
+
+    .arrow-start {
+        clip-path: polygon(90% 0, 100% 50%, 90% 100%, 0 100%, 0 0);
+    }
+
     /* END of Feature */
     /* START of Pricing */
     .pricing-head_before {
