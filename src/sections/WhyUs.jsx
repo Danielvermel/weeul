@@ -47,7 +47,7 @@ const WhyUs = () => {
                                     key={id}
                                     className="relative z-2 mb-6  basis-1/1 max-md:g7 max-md:border-2 max-md:border-s3 max-md:rounded-3xl max-md:flex-320"
                                 >
-                                    <h2 className="mb-1 text-2xl font-semibold text-p4 max-md:mb-3 max-md:h5">
+                                    <h2 className="mb-1 text-xl font-semibold text-p4 max-md:mb-3 max-md:h5">
                                         {title}
                                     </h2>
                                     <p className="body-3 max-md:mb-8 max-md:body-3">

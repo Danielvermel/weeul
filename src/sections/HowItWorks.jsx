@@ -61,7 +61,7 @@ const HowItWorks = () => {
                             </div>
                             <div className="flex flex-row items-start text-center gap-8 -mt-12">
                                 {steps.map(({ id, icon, iconColor, textColor, bgColor, title, caption, reasons }) => (
-                                    <div className="basis-1/4" key={id}>
+                                    <div className="basis-1/4" key={`steps_` + id}>
                                         <div className={clsx("rounded-full  inline-flex")}>
                                             <img
                                                 src={"/images/how-it-works/" + icon + ".svg"}
@@ -79,7 +79,7 @@ const HowItWorks = () => {
                                                     id === "2" && "arrow-start "
                                                 )}
                                             >
-                                                <h3 className={clsx("text-xl font-semibold")}>{title}</h3>
+                                                <h3 className={clsx("text-lg font-semibold")}>{title}</h3>
                                                 <p className="text-sm text-gray-700 mt-1 italic">{caption}</p>
                                             </div>
                                         </div>

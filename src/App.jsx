@@ -1,5 +1,6 @@
 import Header from "./sections/Header.jsx";
 import Hero from "./sections/Hero.jsx";
+import Cause from "./sections/Cause.jsx";
 import WhyUs from "./sections/WhyUs.jsx";
 import HowItWorks from "./sections/HowItWorks.jsx";
 import WhatWeOffer from "./sections/WhatWeOffer.jsx";
@@ -12,6 +13,7 @@ const App = () => {
         <main className="overflow-hidden">
             <Header />
             <Hero />
+            <Cause />
             <WhyUs />
             <HowItWorks />
             <WhatWeOffer />

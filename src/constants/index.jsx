@@ -648,6 +648,45 @@ export const reviews = [
     },
 ];
 
+export const causes = {
+    title: "Are You Frustrated with Conventional Healthcare?",
+    description:
+        "If you feel lost, unsupported, or stuck in symptom management, you're not alone. Here are some of the common challenges many face:",
+    buttonText: " Discover a Better Way Healix",
+    points: [
+        {
+            id: "0",
+            icon: "endless.svg",
+            text: "Endless Tests with No Clear Answers",
+        },
+        {
+            id: "1",
+            icon: "time.svg",
+            text: "Long Wait Times & Limited Access",
+        },
+        {
+            id: "2",
+            icon: "fragmented.svg",
+            text: "Fragmented Care & Generic Plans",
+        },
+        {
+            id: "3",
+            icon: "cost.svg",
+            text: "High Costs",
+        },
+        {
+            id: "4",
+            icon: "shield.svg",
+            text: "Lack of Prevention & Long-term Solutions",
+        },
+        {
+            id: "5",
+            icon: "medicine.svg",
+            text: "Medication Dependency with Side Effects",
+        },
+    ],
+};
+
 export const logos = [
     {
         id: "0",

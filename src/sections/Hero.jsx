@@ -22,10 +22,10 @@ const Hero = () => {
                 <div className="container">
                     <div className="relative z-2 max-w-440 mr-12 max-lg:max-w-388 ">
                         {/* <div className="caption small-2 uppercase text-p3">Video Editing</div> */}
-                        <h2 className="mb-10 font-semibold text-6xl text-p4 max-lg:mb-7 max-lg:h2 max-md:mb-4 max-md:text-5xl max-md:leading-12">
+                        <h2 className="mb-16 font-semibold text-6xl text-p4 max-lg:mb-7 max-lg:h2 max-md:mb-4 max-md:text-5xl max-md:leading-12">
                             Your health is in your hands
                         </h2>
-                        <p className="max-w-440 mb-20 body-1 max-md:mb-10">
+                        <p className="max-w-440 mb-32 body-1 max-md:mb-10">
                             Connecting you with certified professionals to treat the whole you, finding the root cause
                             and guiding you to take back control of your health.
                         </p>

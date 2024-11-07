@@ -70,7 +70,7 @@ const Header = () => {
                                 </li>
                                 {menus.map(({ id, title }) => (
                                     <>
-                                        <li className="nav-li" key={id}>
+                                        <li className="nav-li" key={`menu_` + id}>
                                             <NavLink title={title} />
                                         </li>
                                     </>
@@ -78,9 +78,8 @@ const Header = () => {
 
                                 <li className="nav-li">
                                     <Button
-                                        icon=""
                                         containerClassName="bg-s6  m-6 mx-0"
-                                        textClassName="tracking-wide font-semibold"
+                                        textClassName="tracking-wide font-bold"
                                         onClick={() => {
                                             setType("client");
                                             handleOpenModal();
