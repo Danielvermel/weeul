@@ -1,27 +1,27 @@
 export const reasons = [
     {
         id: "0",
-        title: "1. Personalized Care",
+        title: "Personalized Care",
         text: "Tailored treatments addressing root causes, not just symptoms.",
     },
     {
         id: "1",
-        title: "2. Certified & Experienced Experts",
+        title: "Certified & Experienced Experts",
         text: "Work with the top-tier verified practitioners you can trust.",
     },
     {
         id: "2",
-        title: "3. Prevention & Wellness Focus",
+        title: "Prevention & Wellness Focus",
         text: "Prioritize natural healing, with a focus on long-term well-being, and prevention.",
     },
     {
         id: "3",
-        title: "4. Science-Backed Holistic Care",
+        title: "Science-Backed Holistic Care",
         text: "Healing with evidence-based natural therapies proven to prevent and treat diseases.",
     },
     {
         id: "4",
-        title: "5. 24/7 Access from Anywhere",
+        title: "24/7 Access from Anywhere",
         text: "Book appointments anytime, from anywhere.",
     },
 ];
@@ -89,7 +89,7 @@ export const howItWorksTest = [
         buttonAction: "client",
         buttonTitle: "Find My Health Partner",
         buttonColor: "bg-s6",
-        sideImage: "images/how-it-works/healthy-heart.png",
+        sideImage: "images/how-it-works/healthy-person.png",
         stepsColor: "bg-orange-100",
         steps: [
             {
@@ -645,6 +645,47 @@ export const reviews = [
         avatarUrl: "/images/testimonials/mark-erixon.png",
         comment:
             "Joining Healix has been a game-changer for my practice. It’s allowed me to reach patients all over the world, and it made managing  consultations effortless. I’m able to focus on what matters most—helping people heal.",
+    },
+];
+
+export const aboutUs = [
+    {
+        id: "0",
+        img: "/images/about-us/balance.png",
+        title: "Our Mission",
+        bgColor: "bg-blue-100",
+        description:
+            "HealGuid's mission to empower people to regain control of their health through personalized, holistic care. We believe in connecting individuals with certified, science-backed holistic practitioners who treat the whole person, not just the symptoms.",
+    },
+    {
+        id: "1",
+        img: "/images/about-us/talking.png",
+        title: "Our Community",
+        bgColor: "bg-amber-100",
+        description:
+            "You are not alone in your search for a better healthcare solution. The world is shifting towards integrative, natural approaches as the prevalence of chronic illnesses continues to rise. At HealGuid we are guiding this movement, providing a trusted platform for people to access the holistic care they deserve.",
+    },
+    {
+        id: "2",
+        img: "/images/about-us/horizon.png",
+        title: "Looking Ahead",
+        bgColor: "bg-green-100",
+        description:
+            "HealGuid is more than just a healthcare platform - we're a community-driven movement dedicated to making holistic, preventative care accessible to all. In the coming years, we plan to:",
+        points: [
+            {
+                id: "0",
+                text: "Expanding our services for integrated, lifelong health solutions",
+            },
+            {
+                id: "1",
+                text: "Growing our network of certified holistic practitioners",
+            },
+            {
+                id: "2",
+                text: "Becoming a key educational resource for personal wellbeing",
+            },
+        ],
     },
 ];
 

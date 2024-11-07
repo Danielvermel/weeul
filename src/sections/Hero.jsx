@@ -14,7 +14,10 @@ const Hero = () => {
     const handleCloseModal = () => setIsModalOpen(false);
 
     return (
-        <section className="relative h-lvh pt-48 pb-40 mb-16 max-lg:pt-52 max-lg:pb-36 max-md:pt-36 max-md:pb-32">
+        <section
+            id="hero"
+            className="relative h-lvh pt-48 pb-40 mb-16 max-lg:pt-52 max-lg:pb-36 max-md:pt-36 max-md:pb-32"
+        >
             <Modal isOpen={isModalOpen} onClose={handleCloseModal}>
                 <Newsletter type={type} />
             </Modal>

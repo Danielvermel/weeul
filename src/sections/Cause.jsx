@@ -4,8 +4,8 @@ import Button from "../components/Button.jsx";
 
 const Cause = () => {
     return (
-        <section className="bg-white ">
-            <Element name="About Us" className="pt-24 max-lg:pb-24 max-md:py-16 container">
+        <section className="bg-white p-16">
+            <Element name="About Us" className="max-lg:pb-24 max-md:py-16 container">
                 <div className="flex flex-col">
                     <h1 className="text-center mx-auto text-p4 h4">{causes.title}</h1>
                     <p className="text-center mx-48 font-light mt-6 text-lg leading-8"> {causes.description}</p>

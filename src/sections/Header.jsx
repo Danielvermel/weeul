@@ -5,17 +5,38 @@ import Button from "../components/Button.jsx";
 import clsx from "clsx";
 
 const Header = () => {
+    const [progress, setProgress] = useState(0);
     const [hasScrolled, setHasScrolled] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
+    const [isScrolling, setScrolling] = useState(false);
 
+    // Update the Progress Bar based on scroll position
     useEffect(() => {
+        let timeoutId;
+
         const handleScroll = () => {
+            setScrolling(true); // User is scrolling
+
+            // Clear the timeout if it's already set
+            clearTimeout(timeoutId);
+
+            // Set timeout to detect when user stops scrolling
+            timeoutId = setTimeout(() => {
+                setScrolling(false); // Mark as stopped after 200ms
+            }, 200);
+
             setHasScrolled(window.scrollY > 32);
+
+            const section = document.querySelector("#about-us");
+            const scrolled = (window.scrollY / section.offsetTop) * 100;
+
+            setProgress(Math.min(scrolled, 100));
         };
 
         window.addEventListener("scroll", handleScroll);
 
         return () => {
+            clearTimeout(timeoutId);
             window.removeEventListener("scroll", handleScroll);
         };
     }, []);
@@ -38,7 +59,7 @@ const Header = () => {
         <header
             className={clsx(
                 "fixed top-0 left-0 z-50 w-full py-10 transition-all duration-500 max-lg:py-4",
-                hasScrolled && "py-2 backdrop-blur-[24px] shadow-box "
+                hasScrolled && "py-2 backdrop-blur-[24px] shadow-box"
             )}
         >
             <div className="container flex h-14 items-center max-lg:px-5">
@@ -115,11 +136,14 @@ const Header = () => {
                     onClick={() => setIsOpen((prevState) => !prevState)}
                 >
                     <img
-                        src={`/images/${isOpen ? "close" : "magic"}.svg`}
+                        src={"/images/" + isOpen ? "close" : "magic" + ".svg"}
                         alt="magic"
                         className="size-1/2 object-contain"
                     />
                 </button>
+            </div>
+            <div class="relative">
+                <div class="bg-s6 h-1 absolute mt-2" id="progressBar" style={{ width: `${progress}%` }}></div>
             </div>
         </header>
     );

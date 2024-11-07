@@ -14,7 +14,7 @@ const HowItWorks = () => {
     const handleCloseModal = () => setIsModalOpen(false);
 
     return (
-        <section className="bg-white pt-32 pb-12">
+        <section className="bg-white py-16">
             <Modal isOpen={isModalOpen} onClose={handleCloseModal}>
                 <Newsletter type={type} />
             </Modal>
@@ -66,7 +66,7 @@ const HowItWorks = () => {
                                             <img
                                                 src={"/images/how-it-works/" + icon + ".svg"}
                                                 alt="Explore Icon"
-                                                className="w-36 h-36 mx-auto"
+                                                className="h-28 mx-auto mt-8 mb-6"
                                             />
                                         </div>
                                         <div className="relative">
@@ -80,13 +80,16 @@ const HowItWorks = () => {
                                                 )}
                                             >
                                                 <h3 className={clsx("text-lg font-semibold")}>{title}</h3>
-                                                <p className="text-sm text-gray-700 mt-1 italic">{caption}</p>
+                                                <p className="text-sm text-gray-800 mt-1 italic">{caption}</p>
                                             </div>
                                         </div>
 
                                         <ul className="text-gray-600 mt-4 text-left rounded-2xl pl-8 pt-7 pb-4 pr-4 h-64 list-disc opacity-95 bg-gray-100">
                                             {reasons.map(({ point, description }) => (
-                                                <li key={point + id} className="text-sm mb-6 tracking-wide">
+                                                <li
+                                                    key={point + id}
+                                                    className="text-sm mb-6 tracking-wide  text-gray-800"
+                                                >
                                                     <strong className="tracking-wider">{point}: </strong>
                                                     {description}
                                                 </li>
@@ -95,7 +98,7 @@ const HowItWorks = () => {
                                     </div>
                                 ))}
                                 <div className="basis-1/4 mt-auto justify-center flex">
-                                    <img src={sideImage} />
+                                    <img src={sideImage} className=" max-h-48" />
                                 </div>
                             </div>
                         </div>
