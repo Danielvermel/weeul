@@ -1,12 +1,11 @@
 import { Element } from "react-scroll";
 import { aboutUs } from "../constants/index.jsx";
-import Button from "../components/Button.jsx";
 import clsx from "clsx";
 
 const AboutUs = () => {
     return (
         <section id="about-us" className="bg-white">
-            <Element name="About Us" className=" pt-20 pb-12 max-lg:pb-24 max-md:py-16">
+            <Element name="About Us" className=" pt-20 pb-24 max-lg:pb-24 max-md:py-16">
                 <article className="container flex-col flex">
                     <h2 className="font-semibold text-5xl text-p4 mb-6 max-lg:mb-7 max-lg:h2 max-md:mb-4 max-md:text-5xl max-md:leading-12">
                         About Us

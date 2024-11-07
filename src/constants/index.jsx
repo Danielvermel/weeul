@@ -428,8 +428,10 @@ export const faq = [
 export const clientNewsletter = {
     bgColor: "bg-s5",
     title: "Take Charge Of Your Health Today",
-    description: "Sign up now for early access to Healix and connect with certified health experts dedicated to you.",
+    description: "Sign up now for early access to HealGuid and connect with certified health experts dedicated to you.",
     tick: "I want to receive the latest news and updates from the holistic health community.",
+    type: "interest",
+    buttonColor: "bg-p4 text-white",
     get: [
         { id: "0", desc: "Access to over 500+ certified health experts" },
         { id: "1", desc: "Personalized health & wellness plans tailored to you" },
@@ -444,6 +446,8 @@ export const partnerNewsletter = {
     description:
         "Reach new patients, provide holistic care, and grow your practice on a platform designed for trusted practitioners like you.",
     tick: "I’m interested in learning more about joining the Healix Partner Network.",
+    type: "specialization",
+    buttonColor: "bg-s6",
     get: [
         { id: "0", desc: "Connect with new patients globally seeking holistic care" },
         { id: "1", desc: "Grow your practice with flexible, virtual, and in-person consultations" },

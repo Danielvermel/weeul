@@ -21,6 +21,7 @@ export default {
                     100: "#05091D",
                 },
             },
+
             boxShadow: {
                 100: "0px 4px 4px rgba(0, 0, 0, 0.25), 0px 16px 24px rgba(0, 0, 0, 0.25), inset 0px 3px 6px #1959AD",
                 200: "0px 4px 4px rgba(0, 0, 0, 0.25), 0px 16px 24px rgba(0, 0, 0, 0.25), inset 0px 4px 10px #3391FF",
@@ -31,6 +32,8 @@ export default {
             fontFamily: {
                 inter: ["Inter", "sans-serif"],
                 poppins: ["Poppins", "sans-serif"],
+                roman: ["Times New Roman", "Times", "ui-serif", "Georgia", "serif"],
+                arial: ["Arial", "Helvetica", "sans-serif"],
             },
             transitionProperty: {
                 borderColor: "border-color",
