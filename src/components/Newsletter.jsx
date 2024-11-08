@@ -9,22 +9,43 @@ const Newsletter = ({ type, onClose }) => {
         name: "",
         email: "",
         type: "",
+        extra: "",
         subscribe: false,
     });
 
     const data = type === "client" ? clientNewsletter : partnerNewsletter;
 
     const handleChange = (e) => {
+        console.log("formData: ", formData);
         const { name, value, type, checked } = e.target;
+        console.log("name, value, type, checked: ", name, value, type, checked);
+
         setFormData((prevData) => ({
             ...prevData,
             [name]: type === "checkbox" ? checked : value,
         }));
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmitForm = async (e) => {
         e.preventDefault();
-        // Add your form submission logic here
+
+        try {
+            const response = await fetch(
+                "https://script.google.com/macros/s/AKfycbxk4n9N5LsooJiNid4WGMrbx6RQTFqqhes-4NrXcZNGEbVVsEPSvcr4voYOlt4gMyOx/exec",
+                {
+                    method: "POST",
+                    body: JSON.stringify({ ...formData }),
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                }
+            );
+            const result = await response.json();
+            alert(result.status === "success" ? "Thank you for subscribing!" : "There was an error.");
+        } catch (error) {
+            console.error("Error: ", error);
+        }
+
         console.log("Form Data:", formData);
     };
 
@@ -40,7 +61,7 @@ const Newsletter = ({ type, onClose }) => {
                 <div className="basis-1/2">
                     <h2 className="text-5xl tracking font-normal font-roman">{data.title}</h2>
                     <p className="text-xl mt-4">{data.description}</p>
-                    <form onSubmit={handleSubmit} className="bg-peach-300 p-6 pb-0 rounded-md space-y-4">
+                    <form className="bg-peach-300 p-6 pb-0 rounded-md space-y-4">
                         <div className="flex items-center gap-2  w-3/4">
                             <label htmlFor="name" className="text-black text-lg font- w-1/4">
                                 Name:
@@ -106,6 +127,7 @@ const Newsletter = ({ type, onClose }) => {
                             icon=""
                             containerClassName={clsx("bg-p4 w-72 h-14 m-3 mx-auto justify-center", data.buttonColor)}
                             textClassName="tracking-wide font-arial font-normal text-xl"
+                            onClick={handleSubmitForm}
                         >
                             Get Early Access
                         </Button>

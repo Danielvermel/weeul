@@ -142,8 +142,8 @@ const Header = () => {
                     />
                 </button>
             </div>
-            <div class="relative">
-                <div class="bg-s6 h-1 absolute mt-2" id="progressBar" style={{ width: `${progress}%` }}></div>
+            <div Name="relative">
+                <div className="bg-s6 h-1 absolute mt-2" id="progressBar" style={{ width: `${progress}%` }}></div>
             </div>
         </header>
     );
