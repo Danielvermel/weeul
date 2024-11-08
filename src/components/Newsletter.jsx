@@ -30,16 +30,13 @@ const Newsletter = ({ type, onClose }) => {
         e.preventDefault();
 
         try {
-            const response = await fetch(
-                "https://script.google.com/macros/s/AKfycbxk4n9N5LsooJiNid4WGMrbx6RQTFqqhes-4NrXcZNGEbVVsEPSvcr4voYOlt4gMyOx/exec",
-                {
-                    method: "POST",
-                    body: JSON.stringify({ ...formData }),
-                    headers: {
-                        "Content-Type": "application/json",
-                    },
-                }
-            );
+            const response = await fetch(`${import.meta.env.VITE_API_URL}/subscribe`, {
+                method: "POST",
+                body: JSON.stringify({ ...formData }),
+                headers: {
+                    "Content-Type": "application/json",
+                },
+            });
             const result = await response.json();
             alert(result.status === "success" ? "Thank you for subscribing!" : "There was an error.");
         } catch (error) {
